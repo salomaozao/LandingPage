@@ -1,0 +1,102 @@
+@import url("../../media/fonts/fonts.css");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Open-sans";
+}
+
+.title {
+	font-family: "Roboto-slab";
+	font-weight: 400;
+	font-size: 5em;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+
+	background-image: url("../../media/images/beach+scene1.png");
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
+}
+
+#header {
+	justify-content: space-around;
+	padding: 1em 0 3em;
+}
+
+#header > * {
+	width: 12.5em;
+}
+
+#header * {
+	text-align: center;
+	justify-content: center;
+}
+
+#clock *:not(#hour)::before {
+	content: ":";
+}
+
+#temperature:not(.loaded) {
+	font-size: 1em;
+}
+
+#temperature.loaded::after {
+	content: "°";
+}
+
+#apps-column {
+	margin: 0 auto;
+	width: 20em;
+}
+
+.apps-area {
+	margin: 0.65em 0;
+}
+
+.apps-row {
+	background: rgba(0, 0, 0, 0.65);
+	padding: 0.75em;
+
+	box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 7.5px;
+	justify-content: space-between;
+	transition: box-shadow 0.5s;
+}
+
+.apps-row:hover {
+	box-shadow: 7px 7px 25px 5px rgba(0, 0, 0, 0.5);
+}
+
+.app-icon {
+	border-radius: 50%;
+	width: 1px;
+	height: 1px;
+	padding: 1.5em;
+	background: #000;
+}
+
+footer {
+	width: 100vw;
+
+	position: absolute;
+	bottom: 0;
+
+	padding: 0.15em 0.25em 0.3em;
+	font-size: 14px;
+	text-align: right;
+	/* background: rgba(0, 0, 0, 0.35); */
+}
+
+footer a {
+	color: rgb(199, 13, 13);
+}
