@@ -1,0 +1,41 @@
+@import url("../../media/fonts/fonts.css");
+@import "./components/header.css";
+@import "./components/apps.css";
+@import "./components/aside.css";
+@import "./components/footer.css";
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Open-sans";
+}
+
+.title {
+	font-family: "Roboto-slab";
+	font-weight: 400;
+	font-size: 5em;
+	text-shadow: 0 0 0.15em rgba(0, 0, 0, 0.25);
+}
+
+.danger {
+	color: rgb(170, 0, 0);
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+
+	background-image: url("../../media/images/beach+scene1.png");
+	background-repeat: none;
+	background-size: cover;
+}
+
+div,
+aside,
+section {
+	display: flex;
+	flex-direction: column;
+}
+
+.row {
+	flex-direction: row;
+}

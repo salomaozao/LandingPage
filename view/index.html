@@ -5,9 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome to the internet!</title>
-		<link rel="stylesheet" href="./styles/styles.css" />
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./styles/index.css" />
 	</head>
 	<body>
+		<div id="aside-open">
+			<span class="material-icons"> menu </span>
+		</div>
 		<div class="row" id="header">
 			<div>
 				<div class="row" id="clock">
@@ -52,6 +61,24 @@
 				</div>
 			</div>
 		</div>
+		<aside id="aside" class="off">
+			<div class="row">
+				<span>Configurações</span>
+				<span id="aside-close" class="material-icons"> close </span>
+			</div>
+			<div>
+				<span> Sua Cidade: </span>
+				<section class="inputArea">
+					<input type="text" id="cityInput" />
+					<button class="material-icons">done</button>
+				</section>
+			</div>
+			<div id="user_data">
+				<button id="createAccBttn">Apagar minhas preferências</button>
+			</div>
+
+			<button id="changeBg">Mudar tela de fundo</button>
+		</aside>
 
 		<footer>
 			<span>
@@ -59,6 +86,9 @@
 				<a href="https://github.com/salomaozao">salomaozao</a>
 			</span>
 		</footer>
+		<script src="../controller/index.js"></script>
 		<script src="../controller/weather.js"></script>
+		<script src="../controller/aside.js"></script>
+		<script src="../controller/userControll.js"></script>
 	</body>
 </html>

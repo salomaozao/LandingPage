@@ -1,0 +1,15 @@
+footer {
+	width: 100vw;
+
+	position: absolute;
+	bottom: 0;
+
+	padding: 0.15em 0.25em 0.3em;
+	font-size: 14px;
+	text-align: right;
+	/* background: rgba(0, 0, 0, 0.35); */
+}
+
+footer a {
+	color: rgb(255, 0, 0);
+}

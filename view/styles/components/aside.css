@@ -1,0 +1,68 @@
+#aside-open {
+	top: 1em;
+	position: absolute;
+	left: 1em;
+	font-size: 1.5em;
+	cursor: pointer;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#aside-close,
+#aside-open {
+	cursor: pointer;
+}
+
+aside {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	background: rgba(0, 0, 0, 0.75);
+	height: 100vh;
+	width: 15vw;
+	padding: 1em;
+}
+
+aside div {
+	margin: 1em auto;
+}
+
+aside > div:nth-child(1) {
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+aside section.inputArea {
+	background-color: rgba(0, 0, 0, 0.5);
+	flex-direction: row;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+aside section.inputArea > * {
+	background: transparent;
+	border: 0;
+	outline: 0;
+	margin: 0;
+}
+
+aside section.inputArea input[type="text"] {
+	color: rgb(180, 180, 180);
+	width: 80%;
+}
+
+aside section.inputArea button {
+	color: green;
+	width: 20%;
+}
+aside button:not(.inputArea button) {
+	border-radius: 0.15em;
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	background: rgba(255, 255, 255, 0.45);
+	width: 100%;
+}
+
+#aside-open.off,
+aside.off {
+	display: none;
+}

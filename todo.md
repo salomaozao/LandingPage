@@ -1,8 +1,11 @@
 TODO: Relógio
-TODO: Weather API
 TODO: get favicons
 
-TODO: Sidebar?
+TODO: change bg
+TODO: juntar .js
+TODO: Definir preferências (bg e cidade)
+TODO: Pegar imagem
+TODO: Saber se a letra tem que ficar preta ou branca (ver mix-blend-mode em CSS)
 
 ** TALVES: **
 TODO: Notion API

@@ -1,0 +1,25 @@
+#header {
+	justify-content: space-around;
+	padding: 1em 0 3em;
+}
+
+#header > * {
+	width: 12.5em;
+}
+
+#header * {
+	text-align: center;
+	justify-content: center;
+}
+
+#clock *:not(#hour)::before {
+	content: ":";
+}
+
+#temperature:not(.loaded) {
+	font-size: 1em;
+}
+
+#temperature.loaded::after {
+	content: "°";
+}
