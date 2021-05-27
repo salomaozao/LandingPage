@@ -1,20 +1,17 @@
 const clockEl = document.getElementById("clock")
-const [hourEl, minEl, secsEl] = clockEl.children
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+const [hourEl, minEl] = clockEl.children
 
 const turn = async (el, func) => {
 	el.innerHTML = func
 }
-
-while (true) {
-	var date = new Date()
-	let start = date.getMinutes()
-	while (start != date.getMinutes()) {
+var date
+async function clock() {
+	while (true) {
+		date = new Date()
 		turn(hourEl, date.getHours())
 		turn(minEl, date.getMinutes())
-		turn(secsEl, date.getSeconds())
-		sleep(1000)
-		console.log("a")
+		await new Promise((resolve) => setTimeout(resolve, 5000))
 	}
 }
+
+clock()

@@ -18,7 +18,7 @@
 			<span class="material-icons"> menu </span>
 		</div>
 		<div class="row" id="header">
-			<div>
+			<div id="clockParent">
 				<div class="row" id="clock">
 					<h1 id="hour" class="title">44</h1>
 					<h1 id="min" class="title">32</h1>
@@ -26,9 +26,9 @@
 				<span>Olá, mundo!</span>
 			</div>
 
-			<div>
+			<div id="tempParent">
 				<h1 id="temperature" class="title">carregando</h1>
-				<span>Atibaia - SP</span>
+				<span id="regionNameEl">undefined</span>
 			</div>
 		</div>
 
@@ -70,14 +70,26 @@
 				<span> Sua Cidade: </span>
 				<section class="inputArea">
 					<input type="text" id="cityInput" />
-					<button class="material-icons">done</button>
+					<button class="material-icons" id="citySubmit">done</button>
 				</section>
 			</div>
 			<div id="user_data">
-				<button id="createAccBttn">Apagar minhas preferências</button>
+				<button id="clearData">Apagar minhas preferências</button>
 			</div>
 
 			<button id="changeBg">Mudar tela de fundo</button>
+
+			<div class="componentToggles">
+				<div class="row">
+					<input type="checkbox" id="showClock" />
+				</div>
+				<div class="row">
+					<input type="checkbox" id="showTemp" />
+				</div>
+				<div class="row">
+					<input type="checkbox" id="showApps" />
+				</div>
+			</div>
 		</aside>
 
 		<footer>
@@ -90,5 +102,6 @@
 		<script src="../controller/weather.js"></script>
 		<script src="../controller/aside.js"></script>
 		<script src="../controller/userControll.js"></script>
+		<script src="../controller/clock.js"></script>
 	</body>
 </html>

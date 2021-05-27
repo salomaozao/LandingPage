@@ -20,6 +20,7 @@ aside {
 	background: rgba(0, 0, 0, 0.75);
 	height: 100vh;
 	width: 15vw;
+	min-width: 10em;
 	padding: 1em;
 }
 
@@ -54,6 +55,7 @@ aside section.inputArea input[type="text"] {
 aside section.inputArea button {
 	color: green;
 	width: 20%;
+	min-width: 1.25em;
 }
 aside button:not(.inputArea button) {
 	border-radius: 0.15em;
@@ -65,4 +67,25 @@ aside button:not(.inputArea button) {
 #aside-open.off,
 aside.off {
 	display: none;
+}
+
+aside .componentToggles > div {
+	margin: 0.5em 0;
+}
+
+aside .componentToggles > div::after {
+	margin-left: 0.25em;
+	font-size: 0.85em;
+}
+
+aside .componentToggles > *:nth-child(1)::after {
+	content: "Mostrar relógio";
+}
+
+aside .componentToggles > *:nth-child(2)::after {
+	content: "Mostrar temperatura";
+}
+
+aside .componentToggles > *:nth-child(3)::after {
+	content: "Mostrar aplicativos";
 }
