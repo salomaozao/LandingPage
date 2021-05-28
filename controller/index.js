@@ -13,11 +13,16 @@ document.getElementById("changeBg").addEventListener("click", () => {
 })
 
 const UpdateComponentStatus = (localRef, checkbox, component) => {
-	state = localStorage.getItem(localRef)
-	console.log(state)
+	state = localStorage.getItem(localRef) == "true" //this is really dumb
 	checkbox.checked = state
 	component.style.display = state ? "flex" : "none"
+	if (localStorage.getItem(localRef) === null) {
+		checkbox.checked = true
+		component.style.display = "flex"
+	}
 }
+
+//this is dumb
 
 UpdateComponentStatus(
 	"showClock",
@@ -34,3 +39,6 @@ UpdateComponentStatus(
 	document.getElementById("showApps"),
 	document.getElementById("apps-column"),
 )
+
+const link = localStorage.getItem("backgroundLink")
+link ? (document.body.style.backgroundImage = `url(${link})`) : {}

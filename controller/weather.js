@@ -12,6 +12,7 @@ const changeRegion = (newRegion) => {
 		.then((data) => {
 			tempEl.innerText = data.current.temp_c
 			tempEl.classList.add("loaded")
+			console.log(newRegion)
 			document.getElementById("regionNameEl").innerText = newRegion
 
 			localStorage.setItem("region", newRegion)
@@ -23,7 +24,8 @@ const changeRegion = (newRegion) => {
 		})
 }
 
-changeRegion(defaultRegion)
+const region_i = localStorage.getItem("region")
+region ? changeRegion(region_i) : changeRegion("Atibaia") // When this runs here, regionNameEl value gets redefined correctly, but when this is called in the index.js file, the same element gets renamed to null. Furthermore, this is dumb.
 
 document.getElementById("citySubmit").addEventListener("click", () => {
 	changeRegion(document.getElementById("cityInput").value)

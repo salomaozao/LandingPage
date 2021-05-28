@@ -1,5 +1,5 @@
 //Localstoreage will have preferences.
-
+//TODO: this is dumb.
 const setDisplay = {
 	clock(e) {
 		const el = document.getElementById("clockParent")
@@ -37,6 +37,7 @@ const setDisplay = {
 document.getElementById("showClock").addEventListener("click", setDisplay.clock)
 document.getElementById("showTemp").addEventListener("click", setDisplay.temp)
 document.getElementById("showApps").addEventListener("click", setDisplay.apps)
-document
-	.getElementById("clearData")
-	.addEventListener("click", () => localStorage.clear())
+document.getElementById("clearData").addEventListener("click", () => {
+	localStorage.clear()
+	location.reload()
+})
